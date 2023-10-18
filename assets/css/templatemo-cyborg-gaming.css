@@ -1,3 +1,30 @@
+/*
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+*/
+
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. font & reset css
+02. reset
+03. global styles
+04. header
+05. banner
+06. features
+07. testimonials
+08. contact
+09. footer
+
+--------------------------------------------- */
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
 /* 
 ---------------------------------------------
@@ -52,7 +79,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #101B2C;
+  background-color: #1e1e1e;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -85,7 +112,7 @@ p {
 }
 
 img {
-  width: auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -96,18 +123,15 @@ Global Styles
 */
 html,
 body {
-  background: #0E111F;
+  background: #1f2122;
   font-family: 'Poppins', sans-serif;
 }
 
 body .page-content {
   margin-top: 110px;
-  background-color: #101B2C;
-  border: solid #2E415E;
+  background-color: #27292a;
   padding: 60px;
   border-radius: 23px;
-  border-width: 1px;
-  margin-bottom: 15px;
 }
 
 p {
@@ -311,7 +335,7 @@ Header Style
 */
 
 .background-header {
-  background-color: transparent !important;
+  background-color: #fff !important;
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -341,12 +365,10 @@ Header Style
 
 .header-area .main-nav {
   min-height: 80px;
-  background: #101B2C;
+  background: transparent;
   display: flex;
-  padding: 15px 30px;
-  border-radius: 23px;
-  border: solid #2E415E;
-  border-width: 1px;
+  padding: 15px 0px;
+  border-radius: 50px;
 }
 
 .background-header .main-nav {
@@ -379,6 +401,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
+  border-right: 1px solid #27292a;
   flex-basis: 25%;
   margin-right: 5%;
   -webkit-transition: all 0.3s ease 0s;
@@ -388,7 +411,7 @@ Header Style
 }
 
 .header-area .main-nav .logo img {
-  width: 180px;
+  width: 191px;
 }
 
 .background-header .main-nav .logo {
@@ -401,7 +424,6 @@ Header Style
 
 .header-area .main-nav .nav {
   display: inline-flex;
-  justify-content: flex-start;
   flex-basis: 70%;
   justify-content: flex-end;
   vertical-align: middle;
@@ -414,7 +436,6 @@ Header Style
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
-  justify-content: flex-start;
 }
 
 .header-area .main-nav .nav li {
@@ -439,6 +460,12 @@ Header Style
   letter-spacing: .3px;
 }
 
+.header-area .main-nav .nav li:last-child a {
+  background-color: #27292a;
+  padding: 8px 10px 8px 20px;
+  border-radius: 23px;
+}
+
 .header-area .main-nav .nav li:last-child a img {
   max-width: 30px;
   border-radius: 50%;
@@ -452,7 +479,13 @@ Header Style
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #0086FF !important;
+  color: #e75e8d !important;
+}
+
+.header-area .main-nav .nav li:last-child:hover a,
+.header-area .main-nav .nav li:last-child a.active {
+  color: #fff !important;
+  background-color: #e75e8d !important;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -657,7 +690,7 @@ Header Style
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
-    display: inline-flex;
+    display: none;
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
     -o-transition: all 0s ease 0s;
@@ -740,7 +773,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.png);
+  background-image: url(../images/banner-bg.jpg);
   background-position: center center;
   background-size: cover;
   min-height: 380px;
@@ -763,41 +796,8 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  background-image: linear-gradient(to right, #00C5FF, #0074FF);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
+  color: #ec6090;
 }
-
-.gradient-button {
-  position: relative;
-  border-radius: 10px;
-  --bs-btn-padding-x: 3rem;
-  --bs-btn-padding-y: 0.5rem;
-  background: linear-gradient(90deg, #00C5FF, #0074FF);
-  overflow: hidden;
-  color: #fff; /* Ensure text is visible against the gradient */
-  z-index: 1;
-}
-
-.gradient-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(-90deg, #00C5FF, #0074FF);
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
-}
-
-.gradient-button:hover::before {
-  opacity: 1;
-}
-
 
 /* 
 ---------------------------------------------
@@ -942,13 +942,9 @@ Footer Style
 
 footer p {
   text-align: center;
-  padding: 15px 0px;
+  padding: 30px 0px;
   color: #fff;
-  font-weight: 200;
-  background-color: #101B2C;
-  border: solid #2E415E;
-    border-width: 1px;
-    border-radius: 23px;
+  font-weight: 300;
 }
 
 footer p a {
@@ -1315,7 +1311,7 @@ Game Details Style
 .game-details .content {
   border-radius: 23px;
   padding: 30px;
-  background-color: #0E111F;
+  background-color: #1f2122;
 }
 
 .game-details .content .left-info {
@@ -1360,7 +1356,7 @@ Game Details Style
 }
 
 .game-details .content .right-info {
-  background-color: #101B2C;
+  background-color: #27292a;
   border-radius: 23px;
   padding: 30px;
   margin-bottom: 30px;
@@ -1380,11 +1376,11 @@ Game Details Style
 }
 
 .game-details .content .right-info ul li:first-child i {
-  color: rgb(30, 202, 107);
+  color: yellow;
 } 
 
 .game-details .content .right-info ul li i {
-  color: #0086FF;
+  color: #ec6090;
 }
 
 .game-details .main-border-button {
